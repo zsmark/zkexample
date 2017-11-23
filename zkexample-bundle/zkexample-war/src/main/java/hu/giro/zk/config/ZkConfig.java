@@ -1,53 +1,63 @@
 package hu.giro.zk.config;
 
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.ViewResolver;
-import org.zkoss.zk.au.http.DHtmlUpdateServlet;
-import org.zkoss.zk.ui.http.DHtmlLayoutServlet;
-import org.zkoss.zkspringmvc.ZKUrlBasedViewResolver;
-import org.zkoss.zkspringmvc.ZKView;
-import org.zkoss.zkspringmvc.config.ZKWebMvcConfigurerAdapter;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Configuration
-public class ZkConfig extends ZKWebMvcConfigurerAdapter {
+public class ZkConfig /*extends ZKWebMvcConfigurerAdapter */ {
 
-    @Bean
-    public ServletRegistrationBean dHtmlLayoutServlet(){
-        Map<String,String> params = new HashMap<>();
-        params.put("update-uri","/zkau");
-        DHtmlLayoutServlet dHtmlLayoutServlet = new DHtmlLayoutServlet();
-        ServletRegistrationBean reg = new ServletRegistrationBean(dHtmlLayoutServlet,"*.zul");//*.zul
-        reg.addUrlMappings("*.zhtml");
-        reg.setLoadOnStartup(1);
-        reg.setInitParameters(params);
-        return reg;
-    }
+//    @Bean
+//    public ServletRegistrationBean dHtmlLayoutServlet(){
+//        Map<String,String> params = new HashMap<>();
+//        params.put("update-uri","/zkau");
+//        DHtmlLayoutServlet dHtmlLayoutServlet = new DHtmlLayoutServlet();
+//        ServletRegistrationBean reg = new ServletRegistrationBean(dHtmlLayoutServlet,"*.zul");//*.zul
+//        reg.addUrlMappings("*.zhtml");
+//        reg.setLoadOnStartup(1);
+//        reg.setInitParameters(params);
+//        return reg;
+//    }
+//
+//    @Bean
+//    public ServletRegistrationBean dHtmlUpdateServlet(){
+//        Map<String,String> params = new HashMap<>();
+//        params.put("update-uri","/zkau/*");
+//        ServletRegistrationBean reg = new ServletRegistrationBean(new DHtmlUpdateServlet(),"/zkau/*");
+//        reg.setLoadOnStartup(2);
+//        reg.setInitParameters(params);
+//        return reg;
+//    }
+//
+//    @Bean
+//    public ViewResolver viewResolver(){
+//        ZKUrlBasedViewResolver zkUrlBasedViewResolver = new ZKUrlBasedViewResolver();
+//        zkUrlBasedViewResolver.setPrefix("/");
+//        zkUrlBasedViewResolver.setSuffix("");
+//        zkUrlBasedViewResolver.setViewClass(ZKView.class);
+//        zkUrlBasedViewResolver.setApplicationContext(applicationContext);
+//        zkUrlBasedViewResolver.setExposeContextBeansAsAttributes(true);
+//        return zkUrlBasedViewResolver;
+//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+//        viewResolver.setPrefix("/");
+//        viewResolver.setSuffix(".zul");
+//        viewResolver.setExposeContextBeansAsAttributes(true);
+//        return viewResolver;
+//    }
 
-    @Bean
-    public ServletRegistrationBean dHtmlUpdateServlet(){
-        Map<String,String> params = new HashMap<>();
-        params.put("update-uri","/zkau/*");
-        ServletRegistrationBean reg = new ServletRegistrationBean(new DHtmlUpdateServlet(),"/zkau/*");
-        reg.setLoadOnStartup(2);
-        reg.setInitParameters(params);
-        return reg;
-    }
-
-    @Bean
-    public ViewResolver viewResolver(){
-        ZKUrlBasedViewResolver zkUrlBasedViewResolver = new ZKUrlBasedViewResolver();
-        zkUrlBasedViewResolver.setPrefix("/WEB-INF/pages/");
-        zkUrlBasedViewResolver.setSuffix("");
-        zkUrlBasedViewResolver.setViewClass(ZKView.class);
-        zkUrlBasedViewResolver.setExposeContextBeansAsAttributes(true);
-        return zkUrlBasedViewResolver;
-    }
-
+//    private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
+//            "classpath:/META-INF/resources/", "classpath:/resources/",
+//            "classpath:/static/", "classpath:/public/" };
+//
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        if (!registry.hasMappingForPattern("/webjars/**")) {
+//            registry.addResourceHandler("/webjars/**").addResourceLocations(
+//                    "classpath:/META-INF/resources/webjars/");
+//        }
+//        if (!registry.hasMappingForPattern("/**")) {
+//            registry.addResourceHandler("/**").addResourceLocations(
+//                    RESOURCE_LOCATIONS);
+//        }
+//    }
 //    @Bean
 //    public ServletRegistrationBean springmvc(){
 //        ServletRegistrationBean reg = new ServletRegistrationBean(new DispatcherServlet());

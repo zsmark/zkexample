@@ -1,0 +1,10 @@
+<zk xmlns:ca="client/attribute">
+    <window title="Hello World"
+            viewModel="@id('vm') @init(indexVM)"
+            validationMessages="@id('vmsgs')">
+        <vlayout form="@id('vm')">
+            <label value="@load(vm.count)"/>
+            <button label="Hello World"  ca:data-springmvc-action="/index/helloWorld"/>
+        </vlayout>
+    </window>
+</zk>

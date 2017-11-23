@@ -13,4 +13,11 @@ public class WebConfig extends WebSecurityConfigurerAdapter{
                 .addHeaderWriter(new StaticHeadersWriter("Cache-Control","no-cache,max-age=0, must-revalidate"))
                 .addHeaderWriter(new StaticHeadersWriter("Expires","0")).and().csrf().disable().httpBasic().disable();
     }
+
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication().withUser("ram").password("ram123").roles("ADMIN");
+//        auth.inMemoryAuthentication().withUser("ravan").password("ravan123").roles("USER");
+//        auth.inMemoryAuthentication().withUser("kans").password("kans123").roles("USER");
+//    }
 }

@@ -12,42 +12,42 @@
     <artifactId>zkexample-core-ui</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zk</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zkplus</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zkbind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zul</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zhtml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.common</groupId>
-            <artifactId>zcommon</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.common</groupId>
-            <artifactId>zweb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.zkspringmvc</groupId>
-            <artifactId>zkspringmvc</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.zk</groupId>-->
+            <!--<artifactId>zk</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.zk</groupId>-->
+            <!--<artifactId>zkplus</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.zk</groupId>-->
+            <!--<artifactId>zkbind</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.zk</groupId>-->
+            <!--<artifactId>zul</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.zk</groupId>-->
+            <!--<artifactId>zhtml</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.common</groupId>-->
+            <!--<artifactId>zcommon</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.common</groupId>-->
+            <!--<artifactId>zweb</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>commons-io</groupId>-->
+            <!--<artifactId>commons-io</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.zkoss.zkspringmvc</groupId>-->
+            <!--<artifactId>zkspringmvc</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -57,23 +57,27 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-                <directory>src/main/webapp</directory>
-            </resource>
-        </resources>
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+            <!--</resource>-->
+            <!--<resource>-->
+                <!--<directory>src/main/webapp</directory>-->
+            <!--</resource>-->
+        <!--</resources>-->
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
                     <descriptors>
-                        <descriptor>src/main/assembly/webapp.xml</descriptor>
+                        <descriptor>src/assembly/webapp.xml</descriptor>
                     </descriptors>
                 </configuration>
             </plugin>
