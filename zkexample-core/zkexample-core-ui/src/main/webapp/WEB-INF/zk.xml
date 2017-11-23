@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <zk>
 	<!-- [Optional]
 	Uncomment if you want to defines the application's name 
@@ -9,5 +8,8 @@
 		<value>zkexample</value>
 	</preference>
 	-->
-	
+	<preference>
+		<name>org.zkoss.zk.ui.WebApp.name</name>
+		<value>zkexample</value>
+	</preference>
 </zk>

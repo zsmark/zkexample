@@ -13,7 +13,7 @@ import org.zkoss.zkspringmvc.annotation.ZKNotifyChange;
 import org.zkoss.zkspringmvc.annotation.ZKVariable;
 
 @Controller
-@RequestMapping("/index/*")
+@RequestMapping("/*")
 @Getter
 @SessionAttributes(value = "indexVM")
 public class IndexController {

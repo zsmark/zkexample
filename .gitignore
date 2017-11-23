@@ -1,0 +1,16 @@
+.idea/
+/.idea*
+*iml
+/zkexample-bundle/zkexample-war/zkexample-war.iml
+/zkexample-bundle/zkexample-bundle.iml
+/zkexample-core/zkexample-core-ui/zkexample-core-ui.iml
+/zkexample-core/zkexample-core.iml
+/zkexample.iml
+*/target
+/zkexample-bundle/zkexample-war/target/
+/zkexample-core/zkexample-core-ui/target/
+/zkexample-core/zkexample-core-service-impl/target/
+/zkexample-core/zkexample-core-dao/target/
+/zkexample-core/zkexample-core-componenttest/target/
+/zkexample-bundle/zkexample-dao/target/
+/zkexample-bundle/zkexample-dao/zkexample-dao.iml

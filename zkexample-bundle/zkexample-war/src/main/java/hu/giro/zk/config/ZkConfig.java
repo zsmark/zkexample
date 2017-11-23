@@ -3,7 +3,6 @@ package hu.giro.zk.config;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.ViewResolver;
 import org.zkoss.zk.au.http.DHtmlUpdateServlet;
 import org.zkoss.zk.ui.http.DHtmlLayoutServlet;
@@ -42,7 +41,7 @@ public class ZkConfig extends ZKWebMvcConfigurerAdapter {
     @Bean
     public ViewResolver viewResolver(){
         ZKUrlBasedViewResolver zkUrlBasedViewResolver = new ZKUrlBasedViewResolver();
-        zkUrlBasedViewResolver.setPrefix("/");
+        zkUrlBasedViewResolver.setPrefix("/WEB-INF/pages/");
         zkUrlBasedViewResolver.setSuffix("");
         zkUrlBasedViewResolver.setViewClass(ZKView.class);
         zkUrlBasedViewResolver.setExposeContextBeansAsAttributes(true);
